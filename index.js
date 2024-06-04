@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: "https://personal-bookshelf-frontend.vercel.app"
+    origin: "https://personal-bookshelf-frontend.vercel.app/",
   })
 );
 app.use(express.json());
