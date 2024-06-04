@@ -1,4 +1,4 @@
-// index.js
+d// index.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: 'https://personal-bookshelf-frontend.vercel.app',
+  origin: 'https://personal-bookshelf-backend.vercel.app/books',
   methods: ['GET', 'POST'],
   headers: ['Authorization'],
   credentials: true,
