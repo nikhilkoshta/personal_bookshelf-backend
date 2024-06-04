@@ -15,11 +15,7 @@ const port = process.env.PORT || 5000;
 //   optionsSuccessStatus: 204
 // }));
 
-var corsOptions = {
-  origin: 'https://personal-bookshelf-frontend.vercel.app/books',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-
+app.use(cors());
 
 app.use(express.json());
 
