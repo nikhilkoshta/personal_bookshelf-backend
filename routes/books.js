@@ -1,6 +1,9 @@
 // routes/books.js
 const router = require('express').Router();
 let Book = require('../models/book.model');
+const cors = require('cors');
+
+app.use(cors());
 
 // Get all books
 router.route('/').get((req, res) => {
