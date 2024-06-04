@@ -8,8 +8,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: "*/*",
-  // origin: 'https://personal-bookshelf-frontend.vercel.app',
+  origin: 'https://personal-bookshelf-frontend.vercel.app/books',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204
