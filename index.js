@@ -9,9 +9,9 @@ const port = process.env.PORT || 5000;
 
 app.use(cors({
   origin: 'https://personal-bookshelf-frontend.vercel.app/books',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  methods: ['GET', 'POST'],
   headers: ['Authorization'],
-  credentials: true,
+  // credentials: true,
   optionsSuccessStatus: 204
 }));
 
