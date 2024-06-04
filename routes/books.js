@@ -3,8 +3,7 @@ const router = require('express').Router();
 let Book = require('../models/book.model');
 
 // Get all books
-router.route('/', cors(corsOptions)).get((req, res) => {
-  res.json({msg: 'This is CORS-enabled for only example.com.'})
+router.route('/').get((req, res) => {
   Book.find()
     .then(books => res.json(books))
     .catch(err => res.status(400).json('Error: ' + err));
