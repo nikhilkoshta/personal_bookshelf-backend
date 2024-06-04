@@ -4,6 +4,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
+app.use(cors());
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -14,12 +16,6 @@ const port = process.env.PORT || 5000;
 //   // credentials: true,
 //   optionsSuccessStatus: 204
 // }));
-
-app.use(
-  cors({
-    origin: "https://personal-bookshelf-frontend.vercel.app"
-  })
-);
 app.use(function (request, response, next) {
   response.header("Access-Control-Allow-Origin", "*");
   response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
