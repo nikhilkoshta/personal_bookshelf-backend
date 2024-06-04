@@ -6,7 +6,7 @@ const cors = require('cors');
 app.use(cors());
 
 // Get all books
-router.route('/').get((req, res) => {
+router.route('/books').get((req, res) => {
   Book.find()
     .then(books => res.json(books))
     .catch(err => res.status(400).json('Error: ' + err));
