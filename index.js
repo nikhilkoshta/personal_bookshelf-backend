@@ -7,13 +7,19 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors({
+// app.use(cors({
+//   origin: 'https://personal-bookshelf-frontend.vercel.app/books',
+//   methods: ['GET', 'POST'],
+//   headers: ['Authorization'],
+//   // credentials: true,
+//   optionsSuccessStatus: 204
+// }));
+
+var corsOptions = {
   origin: 'https://personal-bookshelf-frontend.vercel.app/books',
-  methods: ['GET', 'POST'],
-  headers: ['Authorization'],
-  // credentials: true,
-  optionsSuccessStatus: 204
-}));
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+
 
 app.use(express.json());
 
