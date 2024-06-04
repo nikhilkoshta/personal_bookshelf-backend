@@ -7,12 +7,13 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(
-  cors({
-    origin: "https://personal-bookshelf-frontend.vercel.app/",
-    methods: ["GET", "POST"],
-  })
-);
+app.use(cors({
+  origin: 'https://personal-bookshelf-frontend.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204
+}));
+
 app.use(express.json());
 
 const uri = process.env.MONGODB_URI;
