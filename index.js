@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: 'https://personal-bookshelf-frontend.vercel.app/books',
+  origin: 'https://personal-bookshelf-frontend.vercel.app',
   methods: ['GET', 'POST'],
   headers: ['Authorization'],
   credentials: true,
